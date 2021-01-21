@@ -3,14 +3,27 @@
 ## Steps on how to set up the application
 
  *Clone the repository with git clone
- *Copy .env.example file to .env and edit database/Stripe credentials there
+
+
+ *Copy .env.example file to .env
+
+
  *Run composer install
- *Run php artisan key:generate
+
+
  *Run php artisan migrate --seed (it has some seeded data for your testing)
+
 
 API links
 
-*127.0.0.1:8000/api/vi/games for all games
-*127.0.0.1:8000/api/vi/game for 
-*127.0.0.1:8000/api/vi/range for date range
-*127.0.0.1:8000/api/vi/summary
+GET method Return all the games
+*127.0.0.1:8000/api/vi/games/all
+
+Return all the games played per day and their players
+*127.0.0.1:8000/api/vi/games/summary
+
+Return all the games played within a date range
+*127.0.0.1:8000/api/vi/games/range
+
+Return all the players, their games and their gameplays (overall and for each game
+*127.0.0.1:8000/api/vi/games/sort
